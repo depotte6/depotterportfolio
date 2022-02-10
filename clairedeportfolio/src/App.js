@@ -8,6 +8,7 @@ import ResponsiveAppBar from './components/Navbar';
 import Portfolio from './components/Portfolio';
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
+import About from "./components/About";
 
 function App() {
 
@@ -28,7 +29,8 @@ function App() {
       </Routes>
       
       </BrowserRouter>
-      <Contact />
+      
+      <About />
      
       <Portfolio />
     

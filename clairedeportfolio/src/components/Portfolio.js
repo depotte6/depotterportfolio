@@ -37,50 +37,62 @@ const useStyles = makeStyles((theme) => ({
 const projects = [
   {
     name: "Project 1",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
-    consequatur magni quod nesciunt necessitatibus molestiae non
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus
-    iste alias sunt veritatis nisi dolores!`,
+    description: `Giving users a fast and easy way to track their money is important, 
+    but allowing them to access that information anytime is even more important. 
+    Having offline functionality is paramount to our applications success.`,
+    image: '',
+    link: 'https://dry-ocean-37259.herokuapp.com/',
+    github: 'https://github.com/depotte6/BalancedBudget',
    
   },
   {
     name: "Project 2",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    description: `AS A manager
+    I WANT to generate a webpage that displays my team's basic info
+    SO THAT I have quick access to their emails and GitHub profiles`,
+    link: 'https://www.youtube.com/watch?v=I1KKDrWNzqk',
+    github:'https://github.com/depotte6/Team-Profiles',
    
   },
   {
     name: "Project 3",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    description: `Using server side api's to retrieve info about characters from the Marvel Universe, and then finding additional info with a wikipedia api.
+
+    The Marvel fan can search by character. They are then presented with an image and description(when available) sourced from Marvel.com and a random snippet from Wikipedia.com!`,
+    link: 'https://depotte6.github.io/comic-call/',
+    github: 'https://github.com/depotte6/comic-call',
     
   },
   {
     name: "Project 4",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    description: `User Story
+    AS AN employee with a busy schedule
+    I WANT to add important events to a daily planner
+    SO THAT I can manage my time effectively
+    !`,
+    link: 'https://depotte6.github.io/DailyDocket/',
+    github: 'https://github.com/depotte6/DailyDocket',
     
   },
   {
     name: "Project 5",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    description: `Track your fitness with this app.
+    Add exercices to your most recent workout plan.
+    Add new exercises to a new workout plan
+    View combined weight of multiple exercises from the past seven workouts
+    on the stats page
+    View total duration of each workout from past seven workouts on the stats page.!`,
+    link: 'https://lit-basin-70494.herokuapp.com/?id=615a0200861ba40016feba6a',
+    github: 'https://github.com/depotte6/TrackNFitness',
    
   },
   {
     name: "Project 6",
-    description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis\
-    consequatur magni quod nesciunt necessitatibus molestiae non\
-    eligendi, magnam est aliquam recusandae? Magnam soluta minus\
-    iste alias sunt veritatis nisi dolores!`,
+    description: `AS A developer who writes about tech
+    I WANT a CMS-style blog site
+    SO THAT I can publish articles, blog posts, and my thoughts and opinions!`,
+    link: 'https://boiling-mesa-06832.herokuapp.com/login',
+    github: 'https://github.com/depotte6/Bloggy',
     
   },
 ];
@@ -117,12 +129,17 @@ const Portfolio = () => {
                 </CardContent>
               </CardActionArea>
               <CardActions>
+                
+                <a href={project.link}>
+                  <Button size="small" color="primary">
+                    Live Demo
+                  </Button>
+                </a>
+                <a href={project.github}>
                 <Button size="small" color="primary">
-                  Share
+                  Github Repo
                 </Button>
-                <Button size="small" color="primary">
-                  Live Demo
-                </Button>
+                </a>
               </CardActions>
             </Card>
           </Grid>
