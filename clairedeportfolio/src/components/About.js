@@ -4,15 +4,17 @@ import Box from "@material-ui/core/Box";
 import { ClassNames } from '@emotion/react';
 import { Grid } from '@mui/material';
 import { Typography } from '@mui/material';
+import ProductHeroLayout from './ProductHeroLayout';
+import { Container } from '@material-ui/core';
 
 
 
 
 const useStyles = makeStyles((theme) => ({
     contactContainer: {
-        display: "block",
+        display: "transparent",
         background: "#233",
-        height: "100vh",
+        height: "40vh",
       },
       heading: {
         color: "tomato",
@@ -20,12 +22,7 @@ const useStyles = makeStyles((theme) => ({
         textTransform: "uppercase",
         marginBottom: "1rem",
       },
-      form: {
-        display: "block",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        position: "absolute",
-      },
+     
       input: {
         color: "#fff",
       },
@@ -43,14 +40,12 @@ const useStyles = makeStyles((theme) => ({
   const About = () => {
       const classes= useStyles();
     return <div>
-        <Box component='div' className={ClassNames.contactContainer}>
-            
-            <Typography variant="h5" className={classes.heading}>
-            About me
-          </Typography>
-
-       
-        </Box>
+        <ProductHeroLayout>
+          <Container className={classes.contactContainer}>
+            <Typography variant="h3" className={classes.heading}>Hi</Typography>
+          </Container>
+          <h3> About me</h3>
+        </ProductHeroLayout>
   </div>;
 };
 

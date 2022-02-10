@@ -11,7 +11,12 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Container } from "@mui/material";
 
-
+import budgetImg from '../images/budgetImg.jpg';
+import teamImg from '../images/teamImg.jpg';
+import comicImg from '../images/comicImg.jpg';
+import scheduleImg from '../images/workDayImg.jpg';
+import blogImg from '../images/techImg.jpg';
+import fitnessImg from '../images/fitnessImg.jpg';
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -40,7 +45,7 @@ const projects = [
     description: `Giving users a fast and easy way to track their money is important, 
     but allowing them to access that information anytime is even more important. 
     Having offline functionality is paramount to our applications success.`,
-    image: '',
+    image: budgetImg,
     link: 'https://dry-ocean-37259.herokuapp.com/',
     github: 'https://github.com/depotte6/BalancedBudget',
    
@@ -50,6 +55,7 @@ const projects = [
     description: `AS A manager
     I WANT to generate a webpage that displays my team's basic info
     SO THAT I have quick access to their emails and GitHub profiles`,
+    image: teamImg,
     link: 'https://www.youtube.com/watch?v=I1KKDrWNzqk',
     github:'https://github.com/depotte6/Team-Profiles',
    
@@ -57,8 +63,8 @@ const projects = [
   {
     name: "Project 3",
     description: `Using server side api's to retrieve info about characters from the Marvel Universe, and then finding additional info with a wikipedia api.
-
     The Marvel fan can search by character. They are then presented with an image and description(when available) sourced from Marvel.com and a random snippet from Wikipedia.com!`,
+    image: comicImg,
     link: 'https://depotte6.github.io/comic-call/',
     github: 'https://github.com/depotte6/comic-call',
     
@@ -70,6 +76,7 @@ const projects = [
     I WANT to add important events to a daily planner
     SO THAT I can manage my time effectively
     !`,
+    image: scheduleImg,
     link: 'https://depotte6.github.io/DailyDocket/',
     github: 'https://github.com/depotte6/DailyDocket',
     
@@ -82,6 +89,7 @@ const projects = [
     View combined weight of multiple exercises from the past seven workouts
     on the stats page
     View total duration of each workout from past seven workouts on the stats page.!`,
+    image: fitnessImg,
     link: 'https://lit-basin-70494.herokuapp.com/?id=615a0200861ba40016feba6a',
     github: 'https://github.com/depotte6/TrackNFitness',
    
@@ -91,6 +99,7 @@ const projects = [
     description: `AS A developer who writes about tech
     I WANT a CMS-style blog site
     SO THAT I can publish articles, blog posts, and my thoughts and opinions!`,
+    image: blogImg,
     link: 'https://boiling-mesa-06832.herokuapp.com/login',
     github: 'https://github.com/depotte6/Bloggy',
     
@@ -120,10 +129,10 @@ const Portfolio = () => {
                   image={project.image}
                 />
                 <CardContent>
-                  <Typography variant="h5" className={classes.heading} gutterBottom>
+                  <Typography variant="h6" className={classes.heading} gutterBottom>
                     {project.name}
                   </Typography>
-                  <Typography variant="body2" color="tomato">
+                  <Typography variant="body3" color="tomato">
                     {project.description}
                   </Typography>
                 </CardContent>

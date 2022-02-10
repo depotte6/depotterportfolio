@@ -13,14 +13,14 @@ export default function Heading() {
       }}
     >
       
-      <Typography color="tomato" align="center" variant="h3" marked="center">
-        Claire VanAssche DePotter
+      <Typography color="tomato" fontFamily="cursive" align="center" variant="h3" marked="center">
+        Claire <br></br>VanAssche <br></br>DePotter
       </Typography>
       <Typography
         color="inherit"
         align="center"
-        variant="h4"
-        sx={{ mb: 4, mt: { sx: 2, sm: 6 } }}
+        variant="h5"
+        sx={{ mb: 2, mt: { sx: 2, sm: 6 } }}
       >
        full stack web developer
       </Typography>

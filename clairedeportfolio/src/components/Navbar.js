@@ -1,70 +1,45 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
+import { Container, MenuItem, Toolbar, Button } from "@material-ui/core"
+import React, { useEffect } from "react";
+import { Tooltip } from "@material-ui/core";
+import { ButtonGroup } from "@material-ui/core";
 
-const pages = ['About', 'Projects', 'Contact'];
+const Navbar = (props) => {
+  const {
+    pages = [],
+    setCurrentPage,
+    currentPage,
+  } = props;
 
-
-const ResponsiveAppBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
+  useEffect(() => {
+    document.title = (currentPage.name);
+  }, [currentPage]);
 
   return (
-    <AppBar position="static" color="transparent">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}> 
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
+    <Toolbar disableGutters>
+  <Container className="navbar-wrapper">
+      <ButtonGroup size="large" color="primary" aria-label="large button group" variant="text">
+         
+          {pages.map((Page) => (
+            <Button
+              className={`mx-5 ${
+                currentPage.name === Page.name && 'navActive'
+                }`}
+              key={Page.name}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <Box sx={{ flexGrow: 1, display:  'flex' }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+              <span
+                onClick={() => setCurrentPage(Page)}
               >
-                {page}
-              </Button>
-            ))}
-          </Box>
-
+                {(Page.name)}
+              </span>
+            </Button>
+          ))}
         
-        </Toolbar>
-      </Container>
-    </AppBar>
-  );
-};
-export default ResponsiveAppBar;
+      </ButtonGroup>
+    
+
+    </Container>
+    </Toolbar>
+  )
+}
+
+export default Navbar

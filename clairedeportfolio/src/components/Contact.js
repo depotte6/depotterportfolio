@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   contactContainer: {
     display: "block",
     background: "#233",
-    height: "100vh",
+    height: "40vh",
   },
   heading: {
     color: "tomato",
