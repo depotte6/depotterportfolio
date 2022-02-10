@@ -13,20 +13,20 @@ export default function Heading() {
       }}
     >
       
-      <Typography color="inherit" align="center" variant="h3" marked="center">
+      <Typography color="tomato" align="center" variant="h3" marked="center">
         Claire VanAssche DePotter
       </Typography>
       <Typography
         color="inherit"
         align="center"
-        variant="h5"
+        variant="h4"
         sx={{ mb: 4, mt: { sx: 2, sm: 6 } }}
       >
-       Full Stack Web Developer
+       full stack web developer
       </Typography>
      
-      <Typography variant="body2" color="inherit" sx={{ mt: 2 }}>
-        Discover the experience
+      <Typography variant="h5" color="inherit" sx={{ mt: 2 }}>
+       :)
       </Typography>
     
     </ProductHeroLayout>
