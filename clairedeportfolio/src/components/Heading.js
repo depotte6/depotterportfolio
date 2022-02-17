@@ -1,6 +1,8 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography'
 import ProductHeroLayout from './ProductHeroLayout';
+import { Box } from '@material-ui/core';
+
 
 
 
@@ -12,23 +14,28 @@ export default function Heading() {
         backgroundPosition: 'center',
       }}
     >
-      
-      <Typography color="tomato" fontFamily="cursive" align="center" variant="h3" marked="center">
+    <Box
+      xs={{
+        display: 'inline-block',
+      }} >
+      <Typography color="tomato" fontFamily="Courier" align="left" variant="h2" marked="center">
         Claire <br></br>VanAssche <br></br>DePotter
       </Typography>
       <Typography
         color="inherit"
         align="center"
-        variant="h5"
+        variant="h4"
         sx={{ mb: 2, mt: { sx: 2, sm: 6 } }}
       >
-       full stack web developer
+       
       </Typography>
      
-      <Typography variant="h5" color="inherit" sx={{ mt: 2 }}>
-       :)
+      <Typography variant="h4" color="inherit" align="left" sx={{ mt: 2 }}>
+      full stack web developer
       </Typography>
-    
+      
+      </Box>
+     
     </ProductHeroLayout>
   );
 }

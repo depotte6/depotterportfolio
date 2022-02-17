@@ -11,8 +11,8 @@ const ProductHeroLayoutRoot = styled('section')(({ theme }) => ({
   alignItems: 'center',
   [theme.breakpoints.up('sm')]: {
     height: '45vh',
-    minHeight: 400,
-    maxHeight: 900,
+    minHeight: 200,
+    maxHeight: 200,
   },
 }));
 
@@ -27,7 +27,7 @@ function ProductHeroLayout(props) {
         sx={{
           mt: 3,
           mb: 5,
-          display: 'flex',
+          display: 'flexbox',
           flexDirection: 'column',
           alignItems: 'center',
         }}

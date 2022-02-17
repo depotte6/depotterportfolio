@@ -10,6 +10,9 @@ import Contact from "./components/Contact";
 import Resume from "./components/Resume";
 import About from "./components/About";
 import Page from "./components/Page";
+import Cards from "./components/Card";
+import Head from "./components/Head";
+
 
 function App() {
   const [pages] = useState([
@@ -31,23 +34,26 @@ function App() {
     
     <div className="App">
       <This />
-      <Heading />
+      <Head />
       <div>
         <Navbar pages={pages}
           setCurrentPage={setCurrentPage}
           currentPage={currentPage}
         ></Navbar>
-
+   
       </div>
+
       <div>
       <Page currentPage={currentPage}></Page>
       </div>
+
       <BrowserRouter>
       <Routes>
       <Route exact path="/" />
         <Route exact path="/resume" component={Resume} />
         <Route exact path="/portfolio" component={Portfolio} />
         <Route exact path="/contact" component={Contact} />
+        <Route exact path="/about" component={About} />
 
       </Routes>
       

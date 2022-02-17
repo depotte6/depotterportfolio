@@ -24,6 +24,20 @@
 }
 
 
+.MuiButtonGroup-root {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.MuiToolbar-root {
+  justify-content: space-around;
+}
+
+
+.MuiGrid-container {
+  width: 50%;
+  justify-content: center;
+}
 .App-link {
   color: #61dafb;
 }

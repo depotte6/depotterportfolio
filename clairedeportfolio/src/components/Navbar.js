@@ -1,6 +1,5 @@
-import { Container, MenuItem, Toolbar, Button } from "@material-ui/core"
+import {  Toolbar, Button, Box } from "@material-ui/core"
 import React, { useEffect } from "react";
-import { Tooltip } from "@material-ui/core";
 import { ButtonGroup } from "@material-ui/core";
 
 const Navbar = (props) => {
@@ -15,12 +14,17 @@ const Navbar = (props) => {
   }, [currentPage]);
 
   return (
-    <Toolbar disableGutters>
-  <Container className="navbar-wrapper">
-      <ButtonGroup size="large" color="primary" aria-label="large button group" variant="text">
+    <Toolbar width="full-width" disableGutters>
+    <Box  lg={{ 
+        display: 'flex',
+        flexWrap: 'wrap',
+        alignItems: 'center',
+        }}  
+    >
+      <ButtonGroup size='large' color='primary' aria-label='large button group' variant='text'>
          
           {pages.map((Page) => (
-            <Button
+            <Button size="large"
               className={`mx-5 ${
                 currentPage.name === Page.name && 'navActive'
                 }`}
@@ -37,7 +41,7 @@ const Navbar = (props) => {
       </ButtonGroup>
     
 
-    </Container>
+    </Box>
     </Toolbar>
   )
 }

@@ -8,11 +8,7 @@ import Button from "@material-ui/core/Button";
 import SendIcon from '@mui/icons-material/Send';
 
 const useStyles = makeStyles((theme) => ({
-  contactContainer: {
-    display: "block",
-    background: "#233",
-    height: "40vh",
-  },
+
   heading: {
     color: "tomato",
     textAlign: "center",
@@ -21,9 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     display: "block",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    position: "absolute",
+    position: "relative",
   },
   input: {
     color: "#fff",
@@ -64,7 +58,12 @@ const InputField = withStyles({
 const Contact = () => {
   const classes = useStyles();
   return (
-    <Box component="div" className={classes.contactContainer}>
+    <Box
+    sx={{
+      maxWidth: 400,
+      display: 'inline-flex',
+      
+    }}>
       <Grid container justify="center">
         <Box component="form" className={classes.form}>
           <Typography variant="h5" className={classes.heading}>

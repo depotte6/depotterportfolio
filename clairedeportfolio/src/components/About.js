@@ -17,9 +17,8 @@ const useStyles = makeStyles((theme) => ({
         height: "40vh",
       },
       heading: {
-        color: "tomato",
+        color: "secondary",
         textAlign: "center",
-        textTransform: "uppercase",
         marginBottom: "1rem",
       },
      
@@ -28,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
       },
       button: {
         marginTop: "1rem",
-        color: "tomato",
+        color: "secondary",
         borderColor: "teal",
       },
       field: {
@@ -42,9 +41,16 @@ const useStyles = makeStyles((theme) => ({
     return <div>
         <ProductHeroLayout>
           <Container className={classes.contactContainer}>
-            <Typography variant="h3" className={classes.heading}>Hi</Typography>
+            <Typography variant="h3" className={classes.heading}>About me</Typography>
+       
+        
+          <Box>
+            <Typography>Imaginative, dynamic Full Stack Web Developer. Passionate about creating responsive and aesthetic user experience.
+Ability to work in faced-paced team settings with excellent communication, problem solving, and time management skills.
+In my free time I enjoy feeding my creativity - painting, drawing, wood-working - just to name a few. In the summertime you will find me tending to my garden as well.
+</Typography>
+          </Box>
           </Container>
-          <h3> About me</h3>
         </ProductHeroLayout>
   </div>;
 };
